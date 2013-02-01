@@ -69,6 +69,7 @@ action :create do
       end
       shell u['shell']
       comment u['comment']
+      password u['password'] if u['password']
       if home_dir == "/dev/null"
         supports :manage_home => false
       else
